@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>me</h2>
+  <p>my name is fefelals and i am 11 years old.</p>
+
+  <p id="details"></p>
+  <script>
+    class Car {
+      constructor(name) {
+        this.carname = name;
+      }
+      present() {
+        return 'my name is ' + this.carname;
+      }
+    }
+    class Model extends Car {
+      constructor(name, age) {
+        super(name);
+        this.model = age;
+      }
+      show() {
+        return this.present() + ', i am ' + this.model;
+      }
+    }
+    let myCar = new Model("fefe", "11 years old");
+    document.getElementById("details").innerHTML = myCar.show();
+  </script>
+</body>
+</html>
